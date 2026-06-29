@@ -1,0 +1,108 @@
+\chapter{Programs and Programming Languages}
+\label{chap:programs-and-programming-languages}
+
+\chapterintro{Software is made of instructions. This chapter explains what programs are, why programming languages exist, and how source code becomes computer action.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Define program, source code, interpreter, and compiler.
+    \item Explain why humans use programming languages instead of raw binary.
+    \item Understand the difference between syntax and semantics.
+    \item Run a small Python program.
+\end{itemize}}
+
+\section{What Is a Program?}
+
+A program is a sequence of instructions that tells a computer what to do.
+
+\begin{definition}
+A program is an ordered collection of instructions written to perform a task on a computer.
+\end{definition}
+
+For example, this Python program prints a message:
+
+\begin{lstlisting}
+print("Hello, world")
+\end{lstlisting}
+
+\section{Why Programming Languages Exist}
+
+Computers ultimately operate using binary signals. Humans, however, do not want to write large systems as streams of zeros and ones.
+
+Programming languages provide a bridge between human reasoning and machine execution.
+
+\section{Syntax and Semantics}
+
+\begin{definition}
+Syntax is the set of rules that determines whether code is written in a valid form.
+\end{definition}
+
+\begin{definition}
+Semantics is the meaning of the code.
+\end{definition}
+
+For example:
+
+\begin{lstlisting}
+print("AI")
+\end{lstlisting}
+
+The syntax is valid Python. The meaning is: display the text \texttt{AI}.
+
+\section{Interpreters and Compilers}
+
+An interpreter executes source code directly or step by step. Python is commonly used through an interpreter.
+
+A compiler translates source code into another form before execution. Languages such as C and Rust are commonly compiled.
+
+\section{Python as a First Language}
+
+Python is widely used in data science, machine learning, automation, and LLM engineering because it is readable and has a large ecosystem.
+
+\section{First Complete Program}
+
+\begin{lstlisting}
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+message = greet("LLM Engineer")
+print(message)
+\end{lstlisting}
+
+\section{Program Execution}
+
+When you run a Python program:
+
+\begin{enumerate}
+    \item The operating system starts Python.
+    \item Python reads your source code.
+    \item Python checks the syntax.
+    \item Python executes the instructions.
+    \item Output is sent to the terminal.
+\end{enumerate}
+
+\section{Why This Matters for LLM Engineering}
+
+LLM engineers use programming languages to build data pipelines, evaluation scripts, retrieval systems, APIs, user interfaces, and deployment tools. Python is especially important because much of the AI ecosystem is built around it.
+
+\section{Exercises}
+
+\begin{exercise}
+In your own words, explain the difference between syntax and semantics.
+\end{exercise}
+
+\begin{solution}
+Syntax is whether code follows the grammar rules of the language. Semantics is what the code means or does when executed.
+\end{solution}
+
+\begin{exercise}
+Write a Python program that prints your name, your learning goal, and the current chapter title.
+\end{exercise}
+
+\section{Portfolio Milestone}
+
+Create a folder named \texttt{first-python-programs}. Add at least three Python scripts and run them from the terminal.
+
+\section{Summary}
+
+Programs are instructions. Programming languages make instructions understandable to humans. Python will be the main language used throughout this curriculum for data processing, machine learning, LLM engineering, and production systems.
