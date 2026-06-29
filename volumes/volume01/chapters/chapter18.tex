@@ -1,0 +1,89 @@
+\chapter{Half Adders}
+\label{chap:half-adders}
+
+\chapterintro{A half adder is one of the simplest arithmetic circuits. It adds two binary digits and produces a sum bit and a carry bit.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Explain the purpose of a half adder.
+    \item Derive the half adder truth table.
+    \item Understand why XOR produces the sum bit.
+    \item Understand why AND produces the carry bit.
+\end{itemize}}
+
+\section{The Problem}
+
+Binary addition begins with the simplest case: adding two single bits.
+
+There are four possibilities:
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+A & B & Sum & Carry \\
+\midrule
+0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+When \(1+1\), the result is \(10_2\). The rightmost bit is the sum and the leftmost bit is the carry.
+
+\section{Deriving the Circuit}
+
+The sum bit is \(1\) when the inputs are different, so:
+
+\[
+\text{Sum}=A\operatorname{XOR}B
+\]
+
+The carry bit is \(1\) only when both inputs are \(1\), so:
+
+\[
+\text{Carry}=A\operatorname{AND}B
+\]
+
+\section{Python Implementation}
+
+\begin{lstlisting}
+def half_adder(a: int, b: int) -> tuple[int, int]:
+    if a not in (0, 1) or b not in (0, 1):
+        raise ValueError("inputs must be 0 or 1")
+    total = a + b
+    return total % 2, total // 2
+\end{lstlisting}
+
+\section{Worked Example}
+
+For \(A=1\) and \(B=1\):
+
+\[
+\text{Sum}=1\operatorname{XOR}1=0
+\]
+
+\[
+\text{Carry}=1\operatorname{AND}1=1
+\]
+
+Therefore the result is \(10_2\).
+
+\section{Exercises}
+
+\begin{exercise}
+Write the half adder output for \(A=0\), \(B=1\).
+\end{exercise}
+
+\begin{solution}
+The sum is \(1\) and the carry is \(0\). The result is \(01_2\).
+\end{solution}
+
+\section{Portfolio Milestone}
+
+Extend your logic simulator with a \code{half\_adder} function and tests for all four input combinations.
+
+\section{Summary}
+
+A half adder adds two bits. It uses XOR for the sum and AND for the carry.

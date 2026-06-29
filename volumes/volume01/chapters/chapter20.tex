@@ -1,0 +1,94 @@
+\chapter{Toward a Simple CPU}
+\label{chap:toward-simple-cpu}
+
+\chapterintro{This chapter connects the previous foundations: binary numbers, Boolean algebra, logic gates, and adders. Together they point toward the design of a simple CPU.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Explain the basic purpose of a CPU.
+    \item Describe the role of an arithmetic logic unit.
+    \item Connect adders to arithmetic operations.
+    \item Understand the fetch--decode--execute cycle at a high level.
+\end{itemize}}
+
+\section{What a CPU Does}
+
+The Central Processing Unit, or CPU, executes instructions. At a high level, each instruction tells the machine to do a small operation such as add two numbers, move data, compare values, or jump to another instruction.
+
+\begin{definition}
+A CPU is the part of a computer that executes program instructions.
+\end{definition}
+
+\section{The Arithmetic Logic Unit}
+
+The Arithmetic Logic Unit, or ALU, performs arithmetic and logical operations.
+
+Examples include:
+
+\begin{itemize}
+    \item addition,
+    \item subtraction,
+    \item AND,
+    \item OR,
+    \item XOR,
+    \item comparison.
+\end{itemize}
+
+\section{Registers}
+
+Registers are very small, very fast storage locations inside the CPU.
+
+\begin{definition}
+A register is a small storage location inside a processor used to hold data currently being processed.
+\end{definition}
+
+\section{Fetch, Decode, Execute}
+
+A simplified CPU cycle has three steps:
+
+\begin{enumerate}
+    \item Fetch an instruction from memory.
+    \item Decode what the instruction means.
+    \item Execute the instruction.
+\end{enumerate}
+
+\begin{center}
+Fetch $\rightarrow$ Decode $\rightarrow$ Execute
+\end{center}
+
+\section{Python Mini-CPU Sketch}
+
+\begin{lstlisting}
+program = [("LOAD", 5), ("ADD", 3), ("PRINT", None)]
+accumulator = 0
+
+for instruction, value in program:
+    if instruction == "LOAD":
+        accumulator = value
+    elif instruction == "ADD":
+        accumulator += value
+    elif instruction == "PRINT":
+        print(accumulator)
+\end{lstlisting}
+
+\section{Why This Matters for LLM Engineers}
+
+LLM engineering involves high-level tools, but performance depends on hardware. Training and inference ultimately reduce to numerical operations executed by CPUs, GPUs, memory systems, and networks.
+
+\section{Exercises}
+
+\begin{exercise}
+What are the three stages of the simplified CPU cycle?
+\end{exercise}
+
+\begin{solution}
+The three stages are fetch, decode, and execute.
+\end{solution}
+
+\section{Portfolio Milestone}
+
+Build a simple Python interpreter for a tiny instruction set containing \code{LOAD}, \code{ADD}, \code{SUB}, and \code{PRINT}.
+
+\section{Summary}
+
+A CPU executes instructions. Logic gates and adders provide the foundation for arithmetic and control. In later volumes, this hardware foundation will help explain why efficient AI systems depend on memory, parallelism, and optimized numerical computation.
