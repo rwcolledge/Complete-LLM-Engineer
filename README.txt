@@ -1,1 +1,1 @@
-v38 completes the Volume IX scaffold with Chapters 16-20.
+v39 begins Volume X (MLOps) with Chapters 1-5.
