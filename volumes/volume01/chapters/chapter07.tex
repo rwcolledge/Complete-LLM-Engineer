@@ -1,0 +1,26 @@
+
+\chapter{Computer Architecture}
+\label{chap:computer-architecture}
+
+\chapterintro{Computer architecture explains how the main parts of a computer cooperate to execute programs.}
+\learningobjectives{\begin{itemize}\item Identify the CPU, memory, storage, and buses.\item Explain the fetch-decode-execute cycle.\item Understand why GPUs matter for AI.\end{itemize}}
+
+\section{The Big Picture}
+A computer is not a single object. It is a collection of cooperating components. The CPU executes instructions. Memory stores temporary working data. Storage keeps long-term files. Input and output devices communicate with the outside world.
+
+\section{The CPU}
+The Central Processing Unit is the general-purpose instruction executor of the computer.
+\begin{definition}The CPU is the component that fetches, decodes, and executes program instructions.\end{definition}
+
+\section{The Fetch-Decode-Execute Cycle}
+\begin{enumerate}\item Fetch the next instruction from memory.\item Decode what the instruction means.\item Execute the instruction.\item Store or communicate the result.\end{enumerate}
+
+\section{Why GPUs Matter}
+A GPU contains many smaller processing units designed for parallel numerical work. Deep learning uses enormous matrix operations, so GPUs are often much faster than CPUs for neural networks.
+
+\section{Exercise}
+\begin{exercise}Explain why a GPU can be useful for training neural networks.\end{exercise}
+\begin{solution}Neural networks require many similar numerical operations on matrices and tensors. GPUs are designed to perform many operations in parallel, making them well suited to this workload.\end{solution}
+
+\section{Summary}
+Computer architecture connects software instructions to physical hardware. LLM engineering depends on this because model training and inference are constrained by processors, memory, storage, and networking.

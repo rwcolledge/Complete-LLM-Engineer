@@ -1,0 +1,32 @@
+
+\chapter{Memory and Storage}
+\label{chap:memory-and-storage}
+
+\chapterintro{This chapter explains the difference between temporary memory and long-term storage, and why memory limits matter when working with LLMs.}
+\learningobjectives{\begin{itemize}\item Distinguish RAM from storage.\item Explain cache, memory hierarchy, and latency.\item Understand why LLMs require large amounts of memory.\end{itemize}}
+
+\section{RAM}
+Random Access Memory stores data that programs are actively using. RAM is fast, but temporary.
+
+\section{Storage}
+SSDs and hard drives store data for the long term. They are slower than RAM but retain information after power is removed.
+
+\section{Memory Hierarchy}
+\begin{center}\begin{tabular}{ll}\toprule Level & Description\\\midrule Registers & Tiny and extremely fast\\ Cache & Very fast CPU memory\\ RAM & Main working memory\\ SSD & Long-term storage\\ Network Storage & Remote storage\\\bottomrule\end{tabular}\end{center}
+
+\section{LLM Memory Requirements}
+Large models contain billions of parameters. Each parameter is a number. Storing and using these numbers requires memory. Quantization reduces memory by using fewer bits per parameter.
+
+\section{Python Example}
+\begin{lstlisting}
+import sys
+numbers = [1, 2, 3, 4, 5]
+print(sys.getsizeof(numbers))
+\end{lstlisting}
+
+\section{Exercise}
+\begin{exercise}Why might a model fail to load on a computer with limited RAM or GPU memory?\end{exercise}
+\begin{solution}The model parameters, intermediate activations, and runtime overhead may require more memory than the device has available.\end{solution}
+
+\section{Summary}
+Memory and storage determine what data and models a system can handle. Production AI engineering requires careful attention to memory, especially for embeddings, vector stores, and LLM inference.
