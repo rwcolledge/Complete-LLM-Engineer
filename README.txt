@@ -1,1 +1,1 @@
-v17 continues Volume IV (Mathematics for AI) with Chapters 6-10.
+v18 continues Volume IV with Chapters 11-15.
