@@ -1,1 +1,1 @@
-v48 begins Volume XIV (Production Case Studies).
+v49 completes Volume XIV (Production Case Studies).
