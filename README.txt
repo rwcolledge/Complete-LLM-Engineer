@@ -1,1 +1,1 @@
-v40 continues Volume X (MLOps) with Chapters 6-10.
+v41 completes Volume X (MLOps & Enterprise AI) with Chapters 11-15.
