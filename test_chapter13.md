@@ -1,1 +1,1 @@
-print("Example: Delta Lake Fundamentals")
+print("Example: Support Vector Machines")

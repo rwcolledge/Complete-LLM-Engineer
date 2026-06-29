@@ -1,1 +1,4 @@
-v26 continues Volume VI with Chapters 6-10.
+# Checklist: Naive Bayes
+- [ ] Read
+- [ ] Run example
+- [ ] Complete exercises

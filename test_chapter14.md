@@ -1,1 +1,1 @@
-print("Example: Data Versioning and Time Travel")
+print("Example: Naive Bayes")
