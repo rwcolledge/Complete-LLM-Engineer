@@ -1,0 +1,129 @@
+\chapter{Boolean Algebra}
+\label{chap:boolean-algebra}
+
+\chapterintro{Boolean algebra is the mathematics of true and false values. It is the language of digital circuits and the first bridge between mathematics and computer hardware.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Explain Boolean values.
+    \item Use NOT, AND, OR, and XOR operations.
+    \item Read and construct truth tables.
+    \item Understand why Boolean algebra matters for CPUs and AI infrastructure.
+\end{itemize}}
+
+\section{What Is Boolean Algebra?}
+
+Boolean algebra is a system of mathematics in which values are either true or false. In computing, these values are usually represented as \(1\) and \(0\).
+
+\begin{definition}
+A Boolean value is a value with exactly two possible states: true or false.
+\end{definition}
+
+In hardware, true may correspond to a high voltage and false may correspond to a low voltage. In Python, true and false are represented by \code{True} and \code{False}.
+
+\section{The NOT Operation}
+
+The NOT operation reverses a Boolean value.
+
+\[
+\operatorname{NOT}(0)=1
+\]
+
+\[
+\operatorname{NOT}(1)=0
+\]
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+Input & NOT Input \\
+\midrule
+0 & 1 \\
+1 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The AND Operation}
+
+The AND operation is true only when both inputs are true.
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+A & B & A AND B \\
+\midrule
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The OR Operation}
+
+The OR operation is true when at least one input is true.
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+A & B & A OR B \\
+\midrule
+0 & 0 & 0 \\
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The XOR Operation}
+
+The XOR operation is true when exactly one input is true.
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+A & B & A XOR B \\
+\midrule
+0 & 0 & 0 \\
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Python Implementation}
+
+\begin{lstlisting}
+def bool_to_bit(value: bool) -> int:
+    return 1 if value else 0
+
+for a in [False, True]:
+    for b in [False, True]:
+        print(bool_to_bit(a), bool_to_bit(b), bool_to_bit(a and b))
+\end{lstlisting}
+
+\section{Why This Matters for LLM Engineers}
+
+Large language models are software, but software runs on hardware. Hardware is built from circuits, and circuits are built from logical operations. Understanding Boolean algebra helps explain how simple physical devices can support the massive computations used in modern AI.
+
+\section{Exercises}
+
+\begin{exercise}
+Complete the truth table for \(A \operatorname{XOR} B\).
+\end{exercise}
+
+\begin{solution}
+The result is \(1\) when the inputs differ and \(0\) when the inputs are the same: \(00\to0\), \(01\to1\), \(10\to1\), \(11\to0\).
+\end{solution}
+
+\section{Portfolio Milestone}
+
+Create a Python module named \code{logic\_gates.py} that implements NOT, AND, OR, and XOR using functions. Add unit tests for all truth table rows.
+
+\section{Summary}
+
+Boolean algebra provides the mathematical foundation for digital logic. The next chapter uses these operations to build logic gates.

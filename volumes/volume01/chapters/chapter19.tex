@@ -1,0 +1,77 @@
+\chapter{Full Adders}
+\label{chap:full-adders}
+
+\chapterintro{A full adder extends a half adder by accepting a carry-in bit. This allows many adders to be chained together to add multi-bit binary numbers.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Explain carry-in and carry-out.
+    \item Build a full adder from half adders.
+    \item Add multi-bit binary numbers conceptually.
+    \item Implement a ripple-carry adder in Python.
+\end{itemize}}
+
+\section{Why Half Adders Are Not Enough}
+
+A half adder can add two bits, but multi-bit addition also needs to include a carry from the previous column.
+
+A full adder accepts three inputs:
+
+\begin{itemize}
+    \item \(A\)
+    \item \(B\)
+    \item \(C_{in}\), the carry-in
+\end{itemize}
+
+It produces:
+
+\begin{itemize}
+    \item \(S\), the sum bit
+    \item \(C_{out}\), the carry-out bit
+\end{itemize}
+
+\section{Full Adder Equations}
+
+The sum bit is:
+
+\[
+S=A\operatorname{XOR}B\operatorname{XOR}C_{in}
+\]
+
+The carry-out is true when at least two inputs are true:
+
+\[
+C_{out}=(A\operatorname{AND}B)\operatorname{OR}(C_{in}\operatorname{AND}(A\operatorname{XOR}B))
+\]
+
+\section{Python Implementation}
+
+\begin{lstlisting}
+def full_adder(a: int, b: int, carry_in: int) -> tuple[int, int]:
+    if a not in (0, 1) or b not in (0, 1) or carry_in not in (0, 1):
+        raise ValueError("inputs must be 0 or 1")
+    total = a + b + carry_in
+    return total % 2, total // 2
+\end{lstlisting}
+
+\section{Ripple-Carry Addition}
+
+A ripple-carry adder chains full adders from the least significant bit to the most significant bit. Each carry-out becomes the next carry-in.
+
+\section{Exercises}
+
+\begin{exercise}
+For \(A=1\), \(B=1\), and \(C_{in}=1\), compute \(S\) and \(C_{out}\).
+\end{exercise}
+
+\begin{solution}
+The total is \(1+1+1=3\), which is \(11_2\). Therefore \(S=1\) and \(C_{out}=1\).
+\end{solution}
+
+\section{Portfolio Milestone}
+
+Implement a ripple-carry adder that accepts two binary strings and returns their binary sum.
+
+\section{Summary}
+
+Full adders make multi-bit binary addition possible. They are a fundamental building block of arithmetic logic units.
