@@ -1,1 +1,1 @@
-print("Example: Batch and Streaming Processing")
+print("Example: Clustering with k-Means")
