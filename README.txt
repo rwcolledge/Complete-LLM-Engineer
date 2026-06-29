@@ -1,1 +1,1 @@
-Version 9 adds Volume II Chapters 6-10 with Git examples.
+v10 completes Volume II scaffold with Chapters 11-15.
