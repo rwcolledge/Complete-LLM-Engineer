@@ -1,0 +1,137 @@
+\chapter{The Command Line}
+\label{chap:command-line}
+
+\chapterintro{The command line is one of the most important tools for engineers. It lets you navigate files, run programs, automate work, and control development environments.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Explain what a shell is.
+    \item Use basic terminal commands.
+    \item Understand standard input, standard output, and standard error.
+    \item Run Python scripts from the command line.
+    \item Connect command-line skills to Git, Databricks, and deployment workflows.
+\end{itemize}}
+
+\section{What Is the Command Line?}
+
+The command line is a text-based interface for controlling a computer. Instead of clicking buttons, you type commands.
+
+\begin{definition}
+A shell is a program that reads commands from a user, asks the operating system to execute them, and displays the results.
+\end{definition}
+
+Common shells include Bash, Zsh, PowerShell, and Fish.
+
+\section{Why Engineers Use the Command Line}
+
+The command line is useful because it is:
+
+\begin{itemize}
+    \item fast,
+    \item scriptable,
+    \item precise,
+    \item available on servers,
+    \item essential for Git and deployment.
+\end{itemize}
+
+Many production systems do not have graphical interfaces. Engineers must be comfortable working with text commands.
+
+\section{Basic Commands}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Command & Meaning \\
+\midrule
+\texttt{pwd} & Print current directory \\
+\texttt{ls} & List files \\
+\texttt{cd} & Change directory \\
+\texttt{mkdir} & Create directory \\
+\texttt{touch} & Create empty file \\
+\texttt{cat} & Print file contents \\
+\texttt{cp} & Copy files \\
+\texttt{mv} & Move or rename files \\
+\texttt{rm} & Remove files \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{A First Terminal Session}
+
+\begin{lstlisting}[language=bash]
+pwd
+mkdir command-line-lab
+cd command-line-lab
+touch notes.txt
+echo "Hello from the terminal" > notes.txt
+cat notes.txt
+\end{lstlisting}
+
+\section{Standard Streams}
+
+Programs commonly use three streams.
+
+\begin{itemize}
+    \item Standard input: information entering the program.
+    \item Standard output: normal program output.
+    \item Standard error: error messages.
+\end{itemize}
+
+\section{Running Python from the Terminal}
+
+Create a file named \texttt{main.py}.
+
+\begin{lstlisting}
+print("Hello from Python")
+\end{lstlisting}
+
+Run it:
+
+\begin{lstlisting}[language=bash]
+python main.py
+\end{lstlisting}
+
+\section{Why This Matters for LLM Engineering}
+
+LLM engineers use command-line tools to:
+
+\begin{itemize}
+    \item install packages,
+    \item run tests,
+    \item start servers,
+    \item manage Git repositories,
+    \item launch training jobs,
+    \item inspect logs,
+    \item deploy applications.
+\end{itemize}
+
+\section{Git Checkpoint}
+
+\begin{lstlisting}[language=bash]
+git add volumes/volume01/chapters/chapter12.tex
+git commit -m "feat(volume01): add command line chapter"
+\end{lstlisting}
+
+\section{Exercises}
+
+\begin{exercise}
+Use the command line to create a folder called \texttt{terminal-practice}, create a file inside it, write one line into the file, and print the file contents.
+\end{exercise}
+
+\begin{solution}
+One possible solution is:
+\begin{lstlisting}[language=bash]
+mkdir terminal-practice
+cd terminal-practice
+echo "practice" > notes.txt
+cat notes.txt
+\end{lstlisting}
+\end{solution}
+
+\section{Portfolio Milestone}
+
+Create a command-line lab repository containing a README, a Python script, and a transcript of at least ten terminal commands you successfully executed.
+
+\section{Summary}
+
+The command line is a text interface for controlling a computer. It is essential for professional engineering because it supports automation, remote work, Git, package management, testing, and deployment.

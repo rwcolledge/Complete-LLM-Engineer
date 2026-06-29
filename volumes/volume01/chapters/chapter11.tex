@@ -1,0 +1,148 @@
+\chapter{Files and File Systems}
+\label{chap:files-and-file-systems}
+
+\chapterintro{Files are the long-term memory of a computer system. This chapter explains what files are, how folders organize them, and why file formats matter for data, machine learning, and LLM engineering.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Explain what a file is.
+    \item Distinguish files, folders, paths, and extensions.
+    \item Understand absolute and relative paths.
+    \item Explain why file formats matter in AI engineering.
+    \item Write Python code that creates, reads, and writes files.
+\end{itemize}}
+
+\section{What Is a File?}
+
+A file is a named collection of data stored on a storage device. A file may contain text, numbers, images, audio, video, source code, model weights, or configuration settings.
+
+\begin{definition}
+A file is a persistent unit of stored information identified by a name and usually organized inside a directory.
+\end{definition}
+
+Persistent means that the information can remain available after the computer is turned off.
+
+\section{Folders and Directories}
+
+A folder, also called a directory, is a container used to organize files and other folders.
+
+For example:
+
+\begin{lstlisting}[language=bash]
+complete-llm-engineer/
+  main.tex
+  volumes/
+  code/
+  datasets/
+\end{lstlisting}
+
+This structure is important because large projects become impossible to manage if all files are placed in one directory.
+
+\section{Paths}
+
+A path describes where a file is located.
+
+\subsection{Relative Paths}
+
+A relative path starts from the current working directory.
+
+\begin{lstlisting}[language=bash]
+volumes/volume01/chapters/chapter11.tex
+\end{lstlisting}
+
+\subsection{Absolute Paths}
+
+An absolute path starts from the root of the file system.
+
+\begin{lstlisting}[language=bash]
+/home/user/complete-llm-engineer/main.tex
+\end{lstlisting}
+
+\section{File Extensions}
+
+A file extension is the ending of a file name. It often indicates the type of content.
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Extension & Common Meaning \\
+\midrule
+\texttt{.txt} & Plain text \\
+\texttt{.py} & Python source code \\
+\texttt{.tex} & LaTeX source file \\
+\texttt{.csv} & Comma-separated values \\
+\texttt{.json} & JavaScript Object Notation \\
+\texttt{.parquet} & Columnar data format \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Why Files Matter for LLM Engineering}
+
+LLM engineers work with many types of files:
+
+\begin{itemize}
+    \item source code files,
+    \item dataset files,
+    \item model configuration files,
+    \item tokenizers,
+    \item vector index files,
+    \item logs,
+    \item experiment metadata,
+    \item deployment manifests.
+\end{itemize}
+
+A production AI system is not just a model. It is a collection of files, services, configurations, and data flows.
+
+\section{Python Example: Writing a File}
+
+\begin{lstlisting}
+from pathlib import Path
+
+output_path = Path("hello.txt")
+output_path.write_text("Hello, LLM Engineer!\n", encoding="utf-8")
+print(f"Wrote {output_path}")
+\end{lstlisting}
+
+\section{Python Example: Reading a File}
+
+\begin{lstlisting}
+from pathlib import Path
+
+input_path = Path("hello.txt")
+content = input_path.read_text(encoding="utf-8")
+print(content)
+\end{lstlisting}
+
+\section{Databricks Community Edition Note}
+
+In Databricks notebooks, files may live in the workspace, in uploaded tables, or in temporary driver storage. Community Edition is suitable for learning Spark file operations, but production storage concepts should also be practised locally using standard folders and Git.
+
+\section{Git Checkpoint}
+
+\begin{lstlisting}[language=bash]
+git add volumes/volume01/chapters/chapter11.tex code/volume01/chapter11/
+git commit -m "feat(volume01): add files and file systems chapter"
+\end{lstlisting}
+
+\section{Exercises}
+
+\begin{exercise}
+Explain the difference between a file and a folder.
+\end{exercise}
+
+\begin{solution}
+A file stores data. A folder organizes files and may contain other folders. Files are the content units; folders are organizational containers.
+\end{solution}
+
+\begin{exercise}
+Create a text file using Python, write three lines into it, and then read the file back.
+\end{exercise}
+
+\section{Portfolio Milestone}
+
+Create a project folder named \texttt{file-lab}. Inside it, write a Python script that creates a folder called \texttt{outputs}, writes a text report, then reads the report back and prints it.
+
+\section{Summary}
+
+Files are persistent containers of data. Directories organize files. Paths locate them. File formats determine how data is represented. These ideas are essential for managing datasets, code, logs, model artifacts, and production AI systems.

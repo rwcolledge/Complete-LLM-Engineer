@@ -1,0 +1,117 @@
+\chapter{Data, Information, and Representation}
+\label{chap:data-information-representation}
+
+\chapterintro{Computers do not directly understand words, images, or meaning. They store representations. This chapter explains data, information, encoding, and why representation is central to LLMs.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Distinguish data from information.
+    \item Explain representation and encoding.
+    \item Understand text as numeric data.
+    \item Connect representation to embeddings and LLMs.
+\end{itemize}}
+
+\section{Data and Information}
+
+Data consists of raw symbols, measurements, or records. Information is data interpreted in context.
+
+\begin{definition}
+Data is raw recorded material such as numbers, characters, images, or measurements.
+\end{definition}
+
+\begin{definition}
+Information is data that has meaning in a particular context.
+\end{definition}
+
+The number \(37\) is data. If we know it is a temperature in degrees Celsius, it becomes information.
+
+\section{Representation}
+
+Computers represent everything using patterns of bits.
+
+A letter, an image pixel, a sound sample, and a model weight are all represented as numbers inside the machine.
+
+\section{Encoding Text}
+
+Text must be encoded before a computer can store it. A simple encoding assigns numbers to characters.
+
+For example:
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Character & Number \\
+\midrule
+A & 65 \\
+B & 66 \\
+C & 67 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Modern systems commonly use Unicode encodings such as UTF-8.
+
+\section{Python Example: Characters and Numbers}
+
+\begin{lstlisting}
+print(ord("A"))
+print(chr(65))
+\end{lstlisting}
+
+\section{Representation in Machine Learning}
+
+Machine learning models operate on numbers. Therefore, text, images, audio, and structured records must be converted into numerical representations.
+
+In later volumes, we will study embeddings. An embedding is a learned numerical representation of an object such as a word, sentence, document, or image.
+
+\begin{definition}
+An embedding is a vector representation that maps an object into a numerical space where relationships can be computed.
+\end{definition}
+
+\section{Why This Matters for LLMs}
+
+A large language model does not directly receive paragraphs as human meaning. Text is broken into tokens. Tokens are converted into numbers. Numbers are mapped into vectors. The model processes those vectors.
+
+The path is:
+
+\begin{center}
+Text
+
+$\downarrow$
+
+Tokens
+
+$\downarrow$
+
+Token IDs
+
+$\downarrow$
+
+Embeddings
+
+$\downarrow$
+
+Transformer computation
+\end{center}
+
+\section{Exercises}
+
+\begin{exercise}
+Explain the difference between data and information using your own example.
+\end{exercise}
+
+\begin{solution}
+One example: \texttt{2026-06-29} is data. If we know it is the date a model evaluation was run, it becomes information.
+\end{solution}
+
+\begin{exercise}
+Use Python's \texttt{ord} function to print the numeric code for each letter in your first name.
+\end{exercise}
+
+\section{Portfolio Milestone}
+
+Create a script called \texttt{text_to_numbers.py} that converts a sentence into a list of character codes and then reconstructs the original sentence.
+
+\section{Summary}
+
+Computers store representations, not meaning directly. Data becomes information when interpreted in context. LLMs rely on numerical representations of text, especially token IDs and embeddings.

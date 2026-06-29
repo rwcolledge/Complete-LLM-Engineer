@@ -1,0 +1,109 @@
+\chapter{Algorithms}
+\label{chap:algorithms}
+
+\chapterintro{An algorithm is a method for solving a problem. This chapter introduces algorithmic thinking using simple examples before later applying it to machine learning and LLM systems.}
+
+\learningobjectives{
+\begin{itemize}
+    \item Define an algorithm.
+    \item Explain step-by-step problem solving.
+    \item Understand inputs, outputs, and procedures.
+    \item Write simple algorithms in plain English and Python.
+\end{itemize}}
+
+\section{What Is an Algorithm?}
+
+\begin{definition}
+An algorithm is a finite sequence of well-defined steps for solving a problem or completing a task.
+\end{definition}
+
+A recipe is an everyday algorithm. It starts with ingredients, follows steps, and produces a meal.
+
+\section{Inputs and Outputs}
+
+An algorithm receives inputs and produces outputs.
+
+For example, an algorithm for adding two numbers receives two numbers and returns their sum.
+
+\begin{lstlisting}
+def add(a: float, b: float) -> float:
+    return a + b
+\end{lstlisting}
+
+\section{A Plain-English Algorithm}
+
+Algorithm: find the largest number in a list.
+
+\begin{enumerate}
+    \item Start with the first number as the largest seen so far.
+    \item Look at the next number.
+    \item If it is larger, remember it as the new largest.
+    \item Repeat until no numbers remain.
+    \item Return the largest number.
+\end{enumerate}
+
+\section{Python Implementation}
+
+\begin{lstlisting}
+from collections.abc import Sequence
+
+
+def maximum(values: Sequence[float]) -> float:
+    if not values:
+        raise ValueError("values cannot be empty")
+
+    largest = values[0]
+    for value in values[1:]:
+        if value > largest:
+            largest = value
+    return largest
+
+
+print(maximum([3, 1, 9, 2]))
+\end{lstlisting}
+
+\section{Correctness}
+
+An algorithm is correct if it produces the required output for every valid input.
+
+Correctness is important in AI engineering because hidden bugs can corrupt datasets, evaluations, and production decisions.
+
+\section{Efficiency}
+
+Efficiency describes how much time and memory an algorithm uses. Later we will study Big-O notation. For now, notice that some methods require more work than others.
+
+\section{Algorithms in LLM Engineering}
+
+LLM systems use algorithms for:
+
+\begin{itemize}
+    \item tokenization,
+    \item embedding search,
+    \item ranking,
+    \item batching,
+    \item caching,
+    \item sampling,
+    \item evaluation.
+\end{itemize}
+
+\section{Exercises}
+
+\begin{exercise}
+Write a plain-English algorithm for making a cup of tea.
+\end{exercise}
+
+\begin{solution}
+A valid solution should describe finite, ordered steps such as boil water, place tea in cup, add water, wait, remove tea, and serve.
+\end{solution}
+
+\begin{exercise}
+Write a Python function that returns the smallest number in a non-empty list.
+\end{exercise}
+
+\section{Portfolio Milestone}
+
+Create an \texttt{algorithms-lab} folder containing Python implementations for maximum, minimum, average, and counting words in a sentence.
+
+\section{Summary}
+
+Algorithms are precise procedures for solving problems. They are central to all computing and appear throughout AI, from data cleaning to transformer inference.
