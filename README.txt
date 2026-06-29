@@ -1,1 +1,1 @@
-v8 starts Volume II with Chapters 1-5.
+Version 9 adds Volume II Chapters 6-10 with Git examples.
