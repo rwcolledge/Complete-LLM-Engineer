@@ -1,1 +1,1 @@
-v30 completes the Volume VII scaffold with Chapters 11-15.
+v31 begins Volume VIII (Natural Language Processing) with Chapters 1-5.
