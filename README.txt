@@ -1,4 +1,1 @@
-# Checklist: Data Versioning and Time Travel
-- [ ] Read
-- [ ] Run example
-- [ ] Complete exercises
+v25 begins Volume VI (Machine Learning Foundations) with Chapters 1-5.
