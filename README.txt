@@ -1,1 +1,1 @@
-v31 begins Volume VIII (Natural Language Processing) with Chapters 1-5.
+v32 continues Volume VIII with Chapters 6-10.
