@@ -1,1 +1,1 @@
-v39 begins Volume X (MLOps) with Chapters 1-5.
+v40 continues Volume X (MLOps) with Chapters 6-10.
