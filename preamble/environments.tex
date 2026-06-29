@@ -1,0 +1,10 @@
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newcounter{exercise}[chapter]
+\renewcommand{\theexercise}{\thechapter.\arabic{exercise}}
+\newenvironment{exercise}{\refstepcounter{exercise}\begin{tcolorbox}[title=Exercise \theexercise]}{\end{tcolorbox}}
+\newenvironment{solution}{\begin{tcolorbox}[title=Solution]}{\end{tcolorbox}}
+\lstdefinestyle{pythonstyle}{language=Python,basicstyle=\ttfamily\small,breaklines=true,frame=single,showstringspaces=false,columns=fullflexible}
+\lstdefinestyle{bashstyle}{language=bash,basicstyle=\ttfamily\small,breaklines=true,frame=single,showstringspaces=false,columns=fullflexible}
+\lstset{style=pythonstyle}

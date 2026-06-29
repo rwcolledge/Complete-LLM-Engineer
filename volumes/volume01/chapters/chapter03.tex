@@ -1,0 +1,14 @@
+\chapter{Number Systems}
+\label{chap:number-systems}
+\chapterintro{Computers represent information using numbers. This chapter introduces decimal, binary, and hexadecimal.}
+\learningobjectives{\begin{itemize}\item Explain place value.\item Convert binary to decimal.\item Explain why computers use binary.\end{itemize}}
+\section{Decimal}Decimal is base ten and uses digits 0 through 9. For example, \(347=3\times10^2+4\times10^1+7\times10^0\).
+\section{Binary}Binary is base two and uses only 0 and 1. For example:
+\[1011_2=1\times2^3+0\times2^2+1\times2^1+1\times2^0=11_{10}.\]
+\section{Why Binary?}Electronic circuits can naturally represent two states, often described as off and on. These map naturally to 0 and 1.
+\section{Python Example}\begin{lstlisting}
+number = 11
+print(bin(number))
+print(int("1011", 2))
+\end{lstlisting}
+\section{Exercises}\begin{exercise}Convert \(1101_2\) to decimal.\end{exercise}\begin{solution}\(1101_2=8+4+0+1=13\).\end{solution}

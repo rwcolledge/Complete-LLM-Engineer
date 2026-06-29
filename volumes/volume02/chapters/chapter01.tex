@@ -1,0 +1,22 @@
+\chapter{Git and Repository Setup}
+\label{chap:git-setup}
+\chapterintro{This chapter teaches the repository workflow used throughout the series.}
+\learningobjectives{\begin{itemize}\item Install and configure Git.\item Create a repository.\item Commit book and code files.\item Prepare a project for GitHub and Overleaf.\end{itemize}}
+\section{What Is Git?}\begin{definition}Git is a version control system that records changes to files over time.\end{definition}
+\section{Initial Setup}\begin{lstlisting}[style=bashstyle]
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+\end{lstlisting}
+\section{Creating a Repository}\begin{lstlisting}[style=bashstyle]
+git init
+git add .
+git commit -m "Initial commit"
+\end{lstlisting}
+\section{GitHub Remote}\begin{lstlisting}[style=bashstyle]
+git remote add origin https://github.com/YOUR-USERNAME/complete-llm-engineer.git
+git branch -M main
+git push -u origin main
+\end{lstlisting}
+\section{Exercises}\begin{exercise}Create a branch called \code{volume01-edits}.\end{exercise}\begin{solution}\begin{lstlisting}[style=bashstyle]
+git checkout -b volume01-edits
+\end{lstlisting}\end{solution}

@@ -1,0 +1,17 @@
+\chapter{Logic Gates}
+\label{chap:logic-gates}
+\chapterintro{Logic gates are the simple building blocks from which computers are constructed.}
+\learningobjectives{\begin{itemize}\item Explain Boolean values.\item Describe AND, OR, and NOT gates.\item Understand how simple gates combine into larger circuits.\end{itemize}}
+\section{Boolean Values}A Boolean value has two possible states: true or false. In computing these are often represented as 1 and 0.
+\section{The NOT Gate}The NOT gate flips a value: 0 becomes 1 and 1 becomes 0.
+\section{The AND Gate}AND returns 1 only when both inputs are 1.
+\section{The OR Gate}OR returns 1 when at least one input is 1.
+\section{Truth Tables}\begin{table}[H]\centering\begin{tabular}{ccc}\toprule A&B&A AND B\\\midrule 0&0&0\\0&1&0\\1&0&0\\1&1&1\\\bottomrule\end{tabular}\caption{Truth table for AND.}\end{table}
+\section{Python Example}\begin{lstlisting}
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)
+\end{lstlisting}
+\section{Exercises}\begin{exercise}Write the truth table for OR.\end{exercise}\begin{solution}OR is 0 only when both inputs are 0; otherwise it is 1.\end{solution}

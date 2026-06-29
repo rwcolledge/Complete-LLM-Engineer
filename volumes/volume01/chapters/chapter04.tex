@@ -1,0 +1,13 @@
+\chapter{Binary Arithmetic}
+\label{chap:binary-arithmetic}
+\chapterintro{This chapter explains binary addition and why it matters for computer hardware.}
+\learningobjectives{\begin{itemize}\item Add binary numbers.\item Understand carrying in base two.\item Relate binary arithmetic to circuits.\end{itemize}}
+\section{Addition Rules}\[0+0=0\]\[0+1=1\]\[1+0=1\]\[1+1=10_2\]
+\section{Worked Example}\[101_2+011_2=1000_2\]
+This works because \(101_2=5\), \(011_2=3\), and \(5+3=8=1000_2\).
+\section{Python Example}\begin{lstlisting}
+a = 0b101
+b = 0b011
+print(bin(a + b))
+\end{lstlisting}
+\section{Exercises}\begin{exercise}Compute \(1010_2+0011_2\).\end{exercise}\begin{solution}\(1010_2=10\), \(0011_2=3\), so the answer is \(13=1101_2\).\end{solution}

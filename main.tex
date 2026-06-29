@@ -1,0 +1,33 @@
+\documentclass[11pt,openany]{book}
+
+\input{preamble/packages}
+\input{preamble/commands}
+\input{preamble/environments}
+
+\addbibresource{bibliography/references.bib}
+
+\title{The Complete LLM Engineer\\\large From Zero to Production AI Systems Using Free Databricks Community Edition}
+\author{Open Curriculum Series}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\input{volumes/volume01/volume01}
+\input{volumes/volume02/volume02}
+\input{volumes/volume03/volume03}
+\input{volumes/volume04/volume04}
+
+\appendix
+\input{appendices/datasets}
+\input{appendices/git_setup}
+
+\backmatter
+\printbibliography
+\printindex
+
+\end{document}
