@@ -1,1 +1,1 @@
-v41 completes Volume X (MLOps & Enterprise AI) with Chapters 11-15.
+v42 begins Volume XI (Portfolio & Career) with Chapters 1-5.
