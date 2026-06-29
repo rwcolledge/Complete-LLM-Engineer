@@ -1,1 +1,1 @@
-v7 adds Chapters 31-35 and Bash examples.
+v8 starts Volume II with Chapters 1-5.
