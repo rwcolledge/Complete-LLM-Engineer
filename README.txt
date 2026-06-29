@@ -1,1 +1,1 @@
-v49 completes Volume XIV (Production Case Studies).
+v50 begins Volume XV (Professional Practice & Final Capstone).
