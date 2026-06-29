@@ -1,1 +1,1 @@
-v6 adds Chapters 26-30 and companion Python examples.
+v7 adds Chapters 31-35 and Bash examples.
