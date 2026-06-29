@@ -1,1 +1,1 @@
-v25 begins Volume VI (Machine Learning Foundations) with Chapters 1-5.
+v26 continues Volume VI with Chapters 6-10.
