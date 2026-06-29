@@ -1,4 +1,1 @@
-# Checklist: Naive Bayes
-- [ ] Read
-- [ ] Run example
-- [ ] Complete exercises
+v28 begins Volume VII (Deep Learning) with Chapters 1-5.
