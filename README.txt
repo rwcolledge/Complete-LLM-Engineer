@@ -1,1 +1,1 @@
-v11 begins Volume III with Chapters 1-5.
+v12 continues Volume III with Chapters 6-10.

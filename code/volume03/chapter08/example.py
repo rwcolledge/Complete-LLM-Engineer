@@ -1,0 +1,2 @@
+"""Functions"""
+print("Example: Functions")
