@@ -1,1 +1,1 @@
-v51 completes Volume XV with Chapters 6-10.
+v52 begins Volume XVI (Assessment & Career Toolkit).
