@@ -1,0 +1,35 @@
+
+\chapter{Networks and the Internet}
+\label{chap:networks-internet}
+
+\chapterintro{Modern LLM applications usually communicate over networks. This chapter introduces clients, servers, requests, responses, and APIs.}
+\learningobjectives{\begin{itemize}\item Explain what a network is.\item Describe clients and servers.\item Understand HTTP at a beginner level.\item Connect APIs to LLM applications.\end{itemize}}
+
+\section{What Is a Network?}
+A network is a collection of connected computers that can exchange information.
+
+\section{Clients and Servers}
+A client asks for something. A server responds. When you use a chatbot in a web browser, the browser acts as a client and the AI service acts as a server.
+
+\section{HTTP}
+HTTP is a common protocol used by web applications. A request asks for a resource or action. A response returns information.
+
+\section{APIs}
+An Application Programming Interface defines how software components communicate. LLM applications often expose APIs so other programs can send prompts and receive generated responses.
+
+\section{Python Example}
+\begin{lstlisting}
+# This example uses only the standard library.
+from urllib.request import urlopen
+
+with urlopen("https://example.com") as response:
+    html = response.read(100)
+    print(html)
+\end{lstlisting}
+
+\section{Exercise}
+\begin{exercise}Describe the client and server in an AI chatbot interaction.\end{exercise}
+\begin{solution}The user's browser or app is the client. The machine running the chatbot backend and model service is the server.\end{solution}
+
+\section{Summary}
+Networks allow AI systems to serve users. Understanding requests, responses, and APIs prepares the learner for production LLM engineering.

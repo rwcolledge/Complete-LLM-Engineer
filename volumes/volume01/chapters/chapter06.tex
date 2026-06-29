@@ -1,0 +1,41 @@
+
+\chapter{Logic Gates}
+\label{chap:logic-gates}
+
+\chapterintro{Logic gates are the smallest conceptual building blocks of digital computers. This chapter shows how simple true-or-false operations can be combined into circuits that perform computation.}
+
+\learningobjectives{\begin{itemize}\item Explain Boolean values.\item Describe NOT, AND, OR, XOR, NAND, and NOR gates.\item Read basic truth tables.\item Understand how gates lead to arithmetic circuits.\end{itemize}}
+
+\section{Boolean Values}
+A Boolean value has only two possible states: true or false. In computing, these are usually represented as \(1\) and \(0\).
+\begin{definition}A Boolean value is a value that can be either true or false.\end{definition}
+
+\section{Truth Tables}
+A truth table lists every possible input and the output produced by a logical operation.
+
+\section{The NOT Gate}
+The NOT gate reverses a Boolean value.
+\begin{center}\begin{tabular}{cc}\toprule Input & Output \\\midrule 0 & 1\\ 1 & 0\\\bottomrule\end{tabular}\end{center}
+
+\section{The AND Gate}
+The AND gate outputs \(1\) only when both inputs are \(1\).
+\begin{center}\begin{tabular}{ccc}\toprule A & B & A AND B \\\midrule 0&0&0\\0&1&0\\1&0&0\\1&1&1\\\bottomrule\end{tabular}\end{center}
+
+\section{The OR Gate}
+The OR gate outputs \(1\) when at least one input is \(1\).
+
+\section{Python Example}
+\begin{lstlisting}
+a = True
+b = False
+print(not a)
+print(a and b)
+print(a or b)
+\end{lstlisting}
+
+\section{Exercise}
+\begin{exercise}Create the truth table for XOR, where the output is true only when the two inputs are different.\end{exercise}
+\begin{solution}The XOR output is 0 for 00, 1 for 01, 1 for 10, and 0 for 11.\end{solution}
+
+\section{Summary}
+Logic gates transform binary inputs into binary outputs. By combining gates, engineers build adders, memory, CPUs, and eventually the hardware that runs AI systems.

@@ -1,0 +1,25 @@
+
+\chapter{Overleaf and Git Workflow}
+\label{app:overleaf-workflow}
+
+This appendix explains the recommended workflow for developing the series.
+
+\section{Overleaf Upload}
+Upload the repository ZIP to Overleaf and compile \texttt{main.tex}. For large projects, compile individual volumes during drafting.
+
+\section{Git Workflow}
+Use small commits. A recommended pattern is:
+
+\begin{lstlisting}[language=bash]
+git checkout -b volume01-chapter06
+git add volumes/volume01/chapters/chapter06.tex
+git commit -m "Add Volume 1 Chapter 6 on logic gates"
+\end{lstlisting}
+
+\section{Release Tags}
+Tag each finished volume:
+
+\begin{lstlisting}[language=bash]
+git tag v0.1.0-volume01
+git push origin v0.1.0-volume01
+\end{lstlisting}
