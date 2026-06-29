@@ -1,1 +1,1 @@
-v43 completes Volume XI with Chapters 6-10.
+v44 begins Volume XII (Reference Appendices) with Chapters 1-5.
