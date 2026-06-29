@@ -1,1 +1,1 @@
-v47 completes Volume XIII with Chapters 6-10.
+v48 begins Volume XIV (Production Case Studies).
